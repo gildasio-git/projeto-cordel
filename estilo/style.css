@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+/*Resetando as MARGENS e PADDINGS*/
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em; /*Especifica tamanho padrão*/
+
+}
+
+/*Importando fontes do google*/
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
+
+/*Criando varíaveis para as fontes a serem usadas*/
+:root{
+    --fonte1:Verdana, Geneva,Tahoma, sans-serif;
+    --fonte2:'Passion One', cursive;
+    --fonte3:'Sriracha', cursive;
+}
+
+/*Definindo uma configuração comum para o HTML, BODY*/
+html, body{
+    min-height: 100vh; /*Tamanho da view port 100%*/
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+
+/*Configurando o cabeçalho (HEADER)*/
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+
+}
+
+/*Configurando o H1 dentro do HEADER*/
+header > h1{
+    padding-top: 50px;
+
+    /*Alterando letras H1 para maiusculas
+    pode usar :
+    text-transform:uppercase
+    font-variant: small-caps; (cotinua letras maiusculas porém
+    as primeiras letras ficam maiores
+    */
+    font-variant: small-caps;
+    font-family: var(--fonte2);
+    font-size: 4vw;/*10% da largura do viewport*/
+}
+
+
+/*Configurando o parágrafo dentro do CABECALHO*/
+header > p{ 
+    padding-bottom: 50px;
+}
+
+
+/*Configurando o link para toda a página*/
+a{
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+
+/*Configurando o efeito do link ao mover o mouse sobre o mesmo*/
+header a:hover, footer a:hover{
+    text-decoration: underline;
+}
+
+
+/*Configuração geral para todas as sections
+ criando um padding para vh de 10% para gerar o espaço para o efeito 
+ paralax
+*/
+section{
+    font-size: 3.5vw;
+    font-family: var(--fonte3); /*Generaliza as fontes para todas as sections*/
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em; /*Criando espaçamento entre as linhas*/
+    padding-left: 30px;
+
+}
+
+/*Configurando um espaço abaixo dos parágrafos dentros das 
+sections*/
+section > p{
+    padding-bottom: 2em;
+}
+
+
+/*Configurando a Section da classe NORMAL*/
+section.normal{
+    background-color: white;
+    color:black;
+}
+
+/*Configurando a Section da classe IMAGEM*/
+section.imagem{
+    background-color:rgba(0, 0, 0, 0.479);
+    color:white;
+
+    /*Configurando uma sombra dentro da imagem*/
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.486);
+    background-size: cover;
+
+    /*Aplicando o efeito paralax*/
+    background-attachment: fixed;
+}
+
+/*Configurando o parágrafo que estiver dentro da section 
+de imagem */
+section.imagem p{
+    background-color: rgba(0, 0, 0, 0.349);
+    display: inline-block; /*ajusta o tamanho do paragráfo ao
+    tamanho do conteúdo*/
+    padding-left: 5px;
+    text-shadow: 1px 1px 0px black;
+
+}
+
+/*Configurando as sections com imagens apontando img01*/
+section#img01{
+
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+    
+}
+
+/*Configurando as sections com imagens apontando img02*/
+section#img02{
+    background-image: url('../imagens/background002.jpg');
+    
+}
+
+/*Configurando o rodape (FOOTER)*/
+footer{
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding:10px;
+}
